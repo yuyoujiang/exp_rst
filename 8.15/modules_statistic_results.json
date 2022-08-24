@@ -1,0 +1,700 @@
+{
+  "scan_date": "2022-08-15 21:50:57",
+  "registries": {
+    "DATASETS": [
+      {
+        "num_modules": 3,
+        "scope": "mmengine",
+        "mmengine/dataset": [
+          "ConcatDataset",
+          "RepeatDataset",
+          "ClassBalancedDataset"
+        ]
+      },
+      {
+        "num_modules": 14,
+        "scope": "mmdet",
+        "mmdet/datasets": [
+          "CocoDataset",
+          "CityscapesDataset",
+          "CocoPanopticDataset",
+          "CrowdHumanDataset",
+          "MultiImageMixDataset",
+          "DeepFashionDataset",
+          "LVISV05Dataset",
+          "LVISDataset",
+          "LVISV1Dataset",
+          "OpenImagesDataset",
+          "OpenImagesChallengeDataset",
+          "XMLDataset",
+          "VOCDataset",
+          "WIDERFaceDataset"
+        ]
+      }
+    ],
+    "DATA_SAMPLERS": [
+      {
+        "num_modules": 2,
+        "scope": "mmengine",
+        "mmengine/data": [
+          "DefaultSampler",
+          "InfiniteSampler"
+        ]
+      },
+      {
+        "num_modules": 2,
+        "scope": "mmdet",
+        "mmdet/datasets/samplers": [
+          "AspectRatioBatchSampler",
+          "ClassAwareSampler"
+        ]
+      }
+    ],
+    "EVALUATOR": [
+      {
+        "num_modules": 0,
+        "scope": "mmengine"
+      }
+    ],
+    "HOOKS": [
+      {
+        "num_modules": 10,
+        "scope": "mmengine",
+        "mmengine/hooks": [
+          "CheckpointHook",
+          "EMAHook",
+          "EmptyCacheHook",
+          "IterTimerHook",
+          "LoggerHook",
+          "NaiveVisualizationHook",
+          "ParamSchedulerHook",
+          "RuntimeInfoHook",
+          "DistSamplerSeedHook",
+          "SyncBuffersHook"
+        ]
+      },
+      {
+        "num_modules": 7,
+        "scope": "mmdet",
+        "mmdet/engine/hooks": [
+          "CheckInvalidLossHook",
+          "MemoryProfilerHook",
+          "NumClassCheckHook",
+          "SetEpochInfoHook",
+          "SyncNormHook",
+          "DetVisualizationHook",
+          "YOLOXModeSwitchHook"
+        ]
+      }
+    ],
+    "LOG_PROCESSORS": [
+      {
+        "num_modules": 1,
+        "scope": "mmengine",
+        "mmengine/logging": [
+          "LogProcessor"
+        ]
+      }
+    ],
+    "LOOPS": [
+      {
+        "num_modules": 4,
+        "scope": "mmengine",
+        "mmengine/runner": [
+          "EpochBasedTrainLoop",
+          "IterBasedTrainLoop",
+          "ValLoop",
+          "TestLoop"
+        ]
+      },
+      {
+        "num_modules": 0,
+        "scope": "mmdet"
+      }
+    ],
+    "METRICS": [
+      {
+        "num_modules": 1,
+        "scope": "mmengine",
+        "mmengine/evaluator": [
+          "DumpResults"
+        ]
+      },
+      {
+        "num_modules": 7,
+        "scope": "mmdet",
+        "mmdet/evaluation/metrics": [
+          "CityScapesMetric",
+          "CocoMetric",
+          "CocoPanopticMetric",
+          "LVISMetric",
+          "OpenImagesMetric",
+          "VOCMetric",
+          "CrowdHumanMetric"
+        ]
+      }
+    ],
+    "MODELS": [
+      {
+        "num_modules": 5,
+        "scope": "mmengine",
+        "mmengine/model": [
+          "StochasticWeightAverage",
+          "ExponentialMovingAverage",
+          "MomentumAnnealingEMA"
+        ],
+        "mmengine/model/base_model": [
+          "BaseDataPreprocessor",
+          "ImgDataPreprocessor"
+        ]
+      },
+      {
+        "num_modules": 192,
+        "scope": "mmdet",
+        "mmdet/models/layers": [
+          "ExpMomentumEMA"
+        ],
+        "mmdet/models/backbones": [
+          "CSPDarknet",
+          "Darknet",
+          "ResNet",
+          "ResNetV1d",
+          "DetectoRS_ResNet",
+          "DetectoRS_ResNeXt",
+          "EfficientNet",
+          "HourglassNet",
+          "HRNet",
+          "MobileNetV2",
+          "PyramidVisionTransformer",
+          "PyramidVisionTransformerV2",
+          "ResNeXt",
+          "RegNet",
+          "Res2Net",
+          "ResNeSt",
+          "SSDVGG",
+          "SwinTransformer",
+          "TridentResNet"
+        ],
+        "mmdet/models/necks": [
+          "BFP",
+          "ChannelMapper",
+          "CTResNetNeck",
+          "DilatedEncoder",
+          "DyHead",
+          "FPG",
+          "FPN",
+          "FPN_CARAFE",
+          "HRFPN",
+          "NASFPN",
+          "NASFCOS_FPN",
+          "PAFPN",
+          "RFP",
+          "SSDNeck",
+          "YOLOV3Neck",
+          "YOLOXPAFPN"
+        ],
+        "mmdet/models/data_preprocessors": [
+          "DetDataPreprocessor",
+          "BatchSyncRandomResize",
+          "BatchFixedSizePad"
+        ],
+        "mmdet/models/dense_heads": [
+          "AnchorFreeHead",
+          "AnchorHead",
+          "ATSSHead",
+          "FCOSHead",
+          "AutoAssignHead",
+          "RPNHead",
+          "StageCascadeRPNHead",
+          "CascadeRPNHead",
+          "CenterNetHead",
+          "CenterNetUpdateHead",
+          "CornerHead",
+          "CentripetalHead",
+          "DDODHead",
+          "DETRHead",
+          "DeformableDETRHead",
+          "EmbeddingRPNHead",
+          "FoveaHead",
+          "RetinaHead",
+          "FreeAnchorRetinaHead",
+          "FSAFHead",
+          "GuidedAnchorHead",
+          "GARetinaHead",
+          "GARPNHead",
+          "GFLHead",
+          "PAAHead",
+          "LADHead",
+          "LDHead",
+          "MaskFormerHead",
+          "Mask2FormerHead",
+          "NASFCOSHead",
+          "PISARetinaHead",
+          "SSDHead",
+          "PISASSDHead",
+          "RepPointsHead",
+          "RetinaSepBNHead",
+          "SABLRetinaHead",
+          "SOLOHead",
+          "DecoupledSOLOHead",
+          "DecoupledSOLOLightHead",
+          "SOLOV2Head",
+          "TOODHead",
+          "VFNetHead",
+          "YOLACTHead",
+          "YOLACTProtonet",
+          "YOLOV3Head",
+          "YOLOFHead",
+          "YOLOXHead"
+        ],
+        "mmdet/models/losses": [
+          "AssociativeEmbeddingLoss",
+          "BalancedL1Loss",
+          "CrossEntropyLoss",
+          "DiceLoss",
+          "FocalLoss",
+          "GaussianFocalLoss",
+          "QualityFocalLoss",
+          "DistributionFocalLoss",
+          "GHMC",
+          "GHMR",
+          "IoULoss",
+          "BoundedIoULoss",
+          "GIoULoss",
+          "DIoULoss",
+          "CIoULoss",
+          "KnowledgeDistillationKLDivLoss",
+          "MSELoss",
+          "SeesawLoss",
+          "SmoothL1Loss",
+          "L1Loss",
+          "VarifocalLoss"
+        ],
+        "mmdet/models/detectors": [
+          "SingleStageDetector",
+          "ATSS",
+          "AutoAssign",
+          "TwoStageDetector",
+          "CascadeRCNN",
+          "CenterNet",
+          "CornerNet",
+          "DDOD",
+          "DETR",
+          "DeformableDETR",
+          "FastRCNN",
+          "FasterRCNN",
+          "FCOS",
+          "FOVEA",
+          "FSAF",
+          "GFL",
+          "GridRCNN",
+          "HybridTaskCascade",
+          "KnowledgeDistillationSingleStageDetector",
+          "LAD",
+          "MaskFormer",
+          "Mask2Former",
+          "MaskRCNN",
+          "MaskScoringRCNN",
+          "NASFCOS",
+          "PAA",
+          "TwoStagePanopticSegmentor",
+          "PanopticFPN",
+          "PointRend",
+          "SparseRCNN",
+          "QueryInst",
+          "RepPointsDetector",
+          "RetinaNet",
+          "RPN",
+          "SCNet",
+          "SingleStageInstanceSegmentor",
+          "SOLO",
+          "SOLOv2",
+          "TOOD",
+          "TridentFasterRCNN",
+          "VFNet",
+          "YOLACT",
+          "YOLOV3",
+          "YOLOF",
+          "YOLOX"
+        ],
+        "mmdet/models/roi_heads/bbox_heads": [
+          "BBoxHead",
+          "ConvFCBBoxHead",
+          "Shared2FCBBoxHead",
+          "Shared4Conv1FCBBoxHead",
+          "DIIHead",
+          "DoubleConvFCBBoxHead",
+          "SABLHead",
+          "SCNetBBoxHead"
+        ],
+        "mmdet/models/roi_heads": [
+          "CascadeRoIHead",
+          "StandardRoIHead",
+          "DoubleHeadRoIHead",
+          "DynamicRoIHead",
+          "GridRoIHead",
+          "HybridTaskCascadeRoIHead",
+          "MaskScoringRoIHead",
+          "PISARoIHead",
+          "PointRendRoIHead",
+          "SCNetRoIHead",
+          "SparseRoIHead",
+          "TridentRoIHead"
+        ],
+        "mmdet/models/roi_heads/mask_heads": [
+          "FCNMaskHead",
+          "CoarseMaskHead",
+          "DynamicMaskHead",
+          "FeatureRelayHead",
+          "FusedSemanticHead",
+          "GlobalContextHead",
+          "GridHead",
+          "HTCMaskHead",
+          "MaskPointHead",
+          "MaskIoUHead",
+          "SCNetMaskHead",
+          "SCNetSemanticHead"
+        ],
+        "mmdet/models/roi_heads/roi_extractors": [
+          "GenericRoIExtractor",
+          "SingleRoIExtractor"
+        ],
+        "mmdet/models/roi_heads/shared_heads": [
+          "ResLayer"
+        ],
+        "mmdet/models/seg_heads": [
+          "BaseSemanticHead",
+          "PanopticFPNHead"
+        ],
+        "mmdet/models/seg_heads/panoptic_fusion_heads": [
+          "BasePanopticFusionHead",
+          "HeuristicFusionHead",
+          "MaskFormerFusionHead"
+        ]
+      }
+    ],
+    "MODEL_WRAPPERS": [
+      {
+        "num_modules": 3,
+        "scope": "mmengine",
+        "mmengine/model/wrappers": [
+          "MMDistributedDataParallel",
+          "MMSeparateDistributedDataParallel",
+          "MMFullyShardedDataParallel"
+        ]
+      },
+      {
+        "num_modules": 0,
+        "scope": "mmdet"
+      }
+    ],
+    "OPTIMIZERS": [
+      {
+        "num_modules": 14,
+        "scope": "mmengine",
+        "torch/optim": [
+          "ASGD",
+          "Adadelta",
+          "Adagrad",
+          "Adam",
+          "AdamW",
+          "Adamax",
+          "LBFGS",
+          "NAdam",
+          "Optimizer",
+          "RAdam",
+          "RMSprop",
+          "Rprop",
+          "SGD",
+          "SparseAdam"
+        ]
+      },
+      {
+        "num_modules": 0,
+        "scope": "mmdet"
+      }
+    ],
+    "OPTIM_WRAPPERS": [
+      {
+        "num_modules": 2,
+        "scope": "mmengine",
+        "mmengine/optim/optimizer": [
+          "OptimWrapper",
+          "AmpOptimWrapper"
+        ]
+      }
+    ],
+    "OPTIM_WRAPPER_CONSTRUCTORS": [
+      {
+        "num_modules": 1,
+        "scope": "mmengine",
+        "mmengine/optim/optimizer": [
+          "DefaultOptimWrapperConstructor"
+        ]
+      },
+      {
+        "num_modules": 1,
+        "scope": "mmdet",
+        "mmdet/engine/optimizers": [
+          "LearningRateDecayOptimizerConstructor"
+        ]
+      }
+    ],
+    "PARAM_SCHEDULERS": [
+      {
+        "num_modules": 23,
+        "scope": "mmengine",
+        "mmengine/optim/scheduler": [
+          "StepParamScheduler",
+          "MultiStepParamScheduler",
+          "ConstantParamScheduler",
+          "ExponentialParamScheduler",
+          "CosineAnnealingParamScheduler",
+          "LinearParamScheduler",
+          "PolyParamScheduler",
+          "OneCycleParamScheduler",
+          "ConstantLR",
+          "CosineAnnealingLR",
+          "ExponentialLR",
+          "LinearLR",
+          "MultiStepLR",
+          "StepLR",
+          "PolyLR",
+          "OneCycleLR",
+          "ConstantMomentum",
+          "CosineAnnealingMomentum",
+          "ExponentialMomentum",
+          "LinearMomentum",
+          "MultiStepMomentum",
+          "StepMomentum",
+          "PolyMomentum"
+        ]
+      },
+      {
+        "num_modules": 3,
+        "scope": "mmdet",
+        "mmdet/engine/schedulers": [
+          "QuadraticWarmupParamScheduler",
+          "QuadraticWarmupLR",
+          "QuadraticWarmupMomentum"
+        ]
+      }
+    ],
+    "RUNNERS": [
+      {
+        "num_modules": 1,
+        "scope": "mmengine",
+        "mmengine/runner": [
+          "Runner"
+        ]
+      },
+      {
+        "num_modules": 0,
+        "scope": "mmdet"
+      }
+    ],
+    "RUNNER_CONSTRUCTORS": [
+      {
+        "num_modules": 0,
+        "scope": "mmengine"
+      },
+      {
+        "num_modules": 0,
+        "scope": "mmdet"
+      }
+    ],
+    "TASK_UTILS": [
+      {
+        "num_modules": 0,
+        "scope": "mmengine"
+      },
+      {
+        "num_modules": 40,
+        "scope": "mmdet",
+        "mmdet/models/task_modules/assigners": [
+          "MaxIoUAssigner",
+          "ApproxMaxIoUAssigner",
+          "ATSSAssigner",
+          "CenterRegionAssigner",
+          "GridAssigner",
+          "HungarianAssigner",
+          "BboxOverlaps2D",
+          "BBoxL1Cost",
+          "IoUCost",
+          "ClassificationCost",
+          "FocalLossCost",
+          "DiceCost",
+          "CrossEntropyLossCost",
+          "PointAssigner",
+          "RegionAssigner",
+          "SimOTAAssigner",
+          "TaskAlignedAssigner",
+          "UniformAssigner"
+        ],
+        "mmdet/models/task_modules/prior_generators": [
+          "AnchorGenerator",
+          "SSDAnchorGenerator",
+          "LegacyAnchorGenerator",
+          "LegacySSDAnchorGenerator",
+          "YOLOAnchorGenerator",
+          "PointGenerator",
+          "MlvlPointGenerator"
+        ],
+        "mmdet/models/task_modules/coders": [
+          "BucketingBBoxCoder",
+          "DeltaXYWHBBoxCoder",
+          "DistancePointBBoxCoder",
+          "LegacyDeltaXYWHBBoxCoder",
+          "PseudoBBoxCoder",
+          "TBLRBBoxCoder",
+          "YOLOBBoxCoder"
+        ],
+        "mmdet/models/task_modules/samplers": [
+          "CombinedSampler",
+          "RandomSampler",
+          "InstanceBalancedPosSampler",
+          "IoUBalancedNegSampler",
+          "MaskPseudoSampler",
+          "OHEMSampler",
+          "PseudoSampler",
+          "ScoreHLRSampler"
+        ]
+      }
+    ],
+    "TRANSFORMS": [
+      {
+        "num_modules": 17,
+        "scope": "mmengine",
+        "mmcv/transforms": [
+          "LoadImageFromFile",
+          "LoadAnnotations",
+          "KeyMapper",
+          "TransformBroadcaster",
+          "RandomChoice",
+          "RandomApply",
+          "Normalize",
+          "Resize",
+          "Pad",
+          "CenterCrop",
+          "RandomGrayscale",
+          "MultiScaleFlipAug",
+          "RandomChoiceResize",
+          "RandomFlip",
+          "RandomResize",
+          "ToTensor",
+          "ImageToTensor"
+        ]
+      },
+      {
+        "num_modules": 53,
+        "scope": "mmdet",
+        "mmdet/datasets/transforms": [
+          "AutoAugment",
+          "RandAugment",
+          "ColorTransform",
+          "Color",
+          "Brightness",
+          "Contrast",
+          "Sharpness",
+          "Solarize",
+          "SolarizeAdd",
+          "Posterize",
+          "Equalize",
+          "AutoContrast",
+          "Invert",
+          "PackDetInputs",
+          "ToTensor",
+          "ImageToTensor",
+          "Transpose",
+          "ToDataContainer",
+          "WrapFieldsToLists",
+          "GeomTransform",
+          "ShearX",
+          "ShearY",
+          "Rotate",
+          "TranslateX",
+          "TranslateY",
+          "InstaBoost",
+          "LoadImageFromNDArray",
+          "LoadMultiChannelImageFromFiles",
+          "LoadAnnotations",
+          "LoadPanopticAnnotations",
+          "LoadProposals",
+          "FilterAnnotations",
+          "Resize",
+          "RandomFlip",
+          "RandomShift",
+          "Pad",
+          "Normalize",
+          "RandomCrop",
+          "SegRescale",
+          "PhotoMetricDistortion",
+          "Expand",
+          "MinIoURandomCrop",
+          "Corrupt",
+          "Albu",
+          "RandomCenterCropPad",
+          "CutOut",
+          "Mosaic",
+          "MixUp",
+          "RandomAffine",
+          "YOLOXHSVRandomAug",
+          "CopyPaste",
+          "CropBoxes",
+          "MultiBranch"
+        ]
+      }
+    ],
+    "VISBACKENDS": [
+      {
+        "num_modules": 3,
+        "scope": "mmengine",
+        "mmengine/visualization": [
+          "LocalVisBackend",
+          "WandbVisBackend",
+          "TensorboardVisBackend"
+        ]
+      },
+      {
+        "num_modules": 0,
+        "scope": "mmdet"
+      }
+    ],
+    "VISUALIZERS": [
+      {
+        "num_modules": 1,
+        "scope": "mmengine",
+        "mmengine/visualization": [
+          "Visualizer"
+        ]
+      },
+      {
+        "num_modules": 1,
+        "scope": "mmdet",
+        "mmdet/visualization": [
+          "DetLocalVisualizer"
+        ]
+      }
+    ],
+    "WEIGHT_INITIALIZERS": [
+      {
+        "num_modules": 8,
+        "scope": "mmengine",
+        "mmengine/model": [
+          "Constant",
+          "Xavier",
+          "Normal",
+          "TruncNormal",
+          "Uniform",
+          "Kaiming",
+          "Caffe2Xavier",
+          "Pretrained"
+        ]
+      },
+      {
+        "num_modules": 0,
+        "scope": "mmdet"
+      }
+    ]
+  }
+}
